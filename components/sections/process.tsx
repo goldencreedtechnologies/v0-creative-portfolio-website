@@ -101,10 +101,10 @@ export function ProcessSection() {
         </div>
 
         <div className="relative">
-          {/* Connector line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-gold/20 via-gold/60 to-gold/20 -translate-y-1/2" />
+          {/* Connector line - only visible on large screens */}
+          <div className="hidden xl:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-gold/20 via-gold/60 to-gold/20" />
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-5">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -116,23 +116,23 @@ export function ProcessSection() {
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Number marker */}
-                <div className="relative z-10 mx-auto mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg shadow-gold/30 mx-auto">
-                    <span className="text-xl font-bold text-black">
+                <div className="relative z-10 mx-auto mb-4">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-gold flex items-center justify-center shadow-lg shadow-gold/30 mx-auto">
+                    <span className="text-lg lg:text-xl font-bold text-black">
                       {step.number}
                     </span>
                   </div>
                 </div>
 
                 {/* Content card */}
-                <div className="p-6 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 text-center group">
-                  <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
-                    <step.icon className="w-6 h-6 text-gold" />
+                <div className="h-full p-4 lg:p-5 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 text-center group flex flex-col">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-gold/20 transition-colors shrink-0">
+                    <step.icon className="w-5 h-5 lg:w-6 lg:h-6 text-gold" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-gold transition-colors">
+                  <h3 className="text-base lg:text-lg font-bold mb-2 group-hover:text-gold transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs lg:text-sm text-muted-foreground leading-relaxed flex-1">
                     {step.description}
                   </p>
                 </div>
