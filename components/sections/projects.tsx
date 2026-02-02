@@ -206,19 +206,19 @@ export function ProjectsSection() {
       {/* Project Modal */}
       {selectedProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm overflow-y-auto"
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="relative w-full max-w-4xl bg-card rounded-2xl overflow-hidden shadow-2xl border border-gold/20"
+            className="relative w-full max-w-4xl my-8 bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl border border-gold/20"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center hover:bg-gold/20 transition-colors"
+              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/80 backdrop-blur flex items-center justify-center hover:bg-gold/20 transition-colors border border-white/20"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-white" />
             </button>
 
             {/* Video */}
@@ -232,44 +232,44 @@ export function ProjectsSection() {
             </div>
 
             {/* Content */}
-            <div className="p-8">
-              <div className="flex items-start justify-between gap-4 mb-6">
+            <div className="p-6 md:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
                 <div>
                   <p className="text-gold font-medium mb-1">
                     {selectedProject.client}
                   </p>
-                  <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">{selectedProject.title}</h3>
                 </div>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
+                  className="border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent text-white shrink-0"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Full Project
                 </Button>
               </div>
 
-              <p className="text-muted-foreground mb-6">
+              <p className="text-gray-300 mb-6">
                 {selectedProject.summary}
               </p>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="p-4 rounded-xl bg-background border border-border">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="p-4 rounded-xl bg-[#252525] border border-white/10">
                   <h4 className="font-semibold text-gold mb-2">Objective</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-300">
                     {selectedProject.objective}
                   </p>
                 </div>
-                <div className="p-4 rounded-xl bg-background border border-border">
+                <div className="p-4 rounded-xl bg-[#252525] border border-white/10">
                   <h4 className="font-semibold text-gold mb-2">Execution</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-300">
                     {selectedProject.execution}
                   </p>
                 </div>
-                <div className="p-4 rounded-xl bg-gold/10 border border-gold/30">
+                <div className="p-4 rounded-xl bg-gold/10 border border-gold/30 sm:col-span-2 md:col-span-1">
                   <h4 className="font-semibold text-gold mb-2">Result</h4>
-                  <p className="text-sm text-foreground font-medium">
+                  <p className="text-sm text-white font-medium">
                     {selectedProject.result}
                   </p>
                 </div>
