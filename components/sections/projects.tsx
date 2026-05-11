@@ -10,8 +10,8 @@ const projects = [
     title: "Brand Campaign Series",
     client: "Anita Darlington",
     tags: ["Short-form", "Brand Content", "Social"],
-    thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/EqvQUXBhUqA/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/EqvQUXBhUqA",
     summary: "A comprehensive brand campaign designed to increase social presence and engagement.",
     objective: "Create a series of engaging short-form videos that showcase brand personality and drive follower growth.",
     execution: "Developed a content calendar with 3 weekly posts, focusing on trending audio and authentic storytelling.",
@@ -19,32 +19,32 @@ const projects = [
   },
   {
     title: "Artist Promotion Package",
-    client: "Mateen Lander",
+    client: "David Operah",
     tags: ["Music", "Reels", "TikTok"],
-    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://lh3.googleusercontent.com/d/ErtLK2pa2Jl9ehxfk",
+    videoUrl: "https://www.instagram.com/reel/DTIrZa3DRls/embed",
     summary: "Multi-platform content strategy for emerging artist promotion.",
     objective: "Build buzz around new music release through strategic content placement.",
     execution: "Created teaser clips, behind-the-scenes content, and lyric snippets optimized for each platform.",
     result: "Generated 500K+ combined views across platforms within release week.",
   },
   {
-    title: "Startup Launch Campaign",
-    client: "David Operah",
-    tags: ["Tech", "Launch", "YouTube"],
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    summary: "Complete video content package for tech startup product launch.",
-    objective: "Create compelling product showcase and explainer content for launch.",
-    execution: "Produced launch video, feature breakdowns, and user testimonial compilations.",
-    result: "Launch video achieved 100K views and contributed to successful funding round.",
+    title: "Social Media Management",
+    client: "Southwood Nigeria",
+    tags: ["Social Media", "Content Strategy", "Brand Growth"],
+    thumbnail: "https://lh3.googleusercontent.com/d/V4f8XSA9wVkSZt0NZ",
+    videoUrl: "https://www.instagram.com/reel/DHA7QcHMd7U/embed",
+    summary: "End-to-end social media management driving consistent brand presence and audience engagement.",
+    objective: "Build and maintain a strong social media presence with consistent content delivery.",
+    execution: "Managed content calendar, created engaging posts, monitored analytics, and optimized posting schedule for maximum reach.",
+    result: "Achieved 200% increase in engagement and established consistent brand voice across all platforms.",
   },
   {
     title: "Educational Content Series",
     client: "BTVC",
     tags: ["Education", "Long-form", "YouTube"],
-    thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://lh3.googleusercontent.com/d/GasFEAjDjpow5NKxj",
+    videoUrl: "https://www.instagram.com/reel/DL4WVS8okr_/embed",
     summary: "Ongoing educational content production and optimization.",
     objective: "Establish thought leadership through valuable educational content.",
     execution: "Developed consistent format, optimized thumbnails, and implemented SEO strategies.",
@@ -54,8 +54,8 @@ const projects = [
     title: "Brand Identity Videos",
     client: "Ezyride",
     tags: ["Branding", "Commercial", "Ads"],
-    thumbnail: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://www.instagram.com/p/DHkyr2iNAIV/media/?size=l",
+    videoUrl: "https://www.instagram.com/reel/DP8uOAADM4X/embed",
     summary: "Commercial video production for ride-sharing platform.",
     objective: "Create brand awareness content highlighting unique value propositions.",
     execution: "Produced series of lifestyle-focused ads showcasing user experience and convenience.",
@@ -65,34 +65,34 @@ const projects = [
     title: "Corporate Content Suite",
     client: "Golden Creed Technologies",
     tags: ["Corporate", "B2B", "LinkedIn"],
-    thumbnail: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://www.instagram.com/p/CnUCh7MNmA2/media/?size=l",
+    videoUrl: "https://www.instagram.com/reel/DFtYV0NN1kb/embed",
     summary: "Professional content package for B2B technology company.",
     objective: "Establish professional presence and attract enterprise clients.",
     execution: "Created case study videos, team introductions, and product demonstrations.",
     result: "LinkedIn engagement increased by 200% with several enterprise leads generated.",
   },
   {
-    title: "Consulting Firm Rebrand",
+    title: "Tech & Content Services",
     client: "Glide Strategy Solutions Limited",
-    tags: ["Consulting", "Rebrand", "Website"],
-    thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    summary: "Complete digital content overhaul for strategic consulting firm.",
-    objective: "Modernize brand presence and communicate expertise effectively.",
-    execution: "Redesigned website content, created service explainer videos, and developed content strategy.",
-    result: "Website traffic increased 80% with improved conversion rates on service pages.",
+    tags: ["Tech", "Content Creation", "Digital Strategy"],
+    thumbnail: "https://www.instagram.com/p/Cf8akq8sOhe/media/?size=l",
+    videoUrl: "https://www.instagram.com/reel/DT0WOq0jPTP/embed",
+    summary: "Comprehensive tech and content services package for strategic solutions firm.",
+    objective: "Deliver high-quality digital content that showcases technical expertise and drives client acquisition.",
+    execution: "Developed branded content series, technical explainers, and social media assets optimized for B2B audience.",
+    result: "Website traffic increased 80% with improved conversion rates and stronger brand positioning.",
   },
   {
-    title: "Lifestyle Brand Content",
+    title: "Lifestyle Brand & Documentary",
     client: "Continental Hustles",
-    tags: ["Lifestyle", "Social", "Reels"],
-    thumbnail: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    summary: "Ongoing social media content management and creation.",
-    objective: "Build engaged community around lifestyle brand values.",
-    execution: "Consistent posting schedule with authentic, relatable content tailored to target demographic.",
-    result: "Community grew to 50K+ engaged followers with strong comment engagement.",
+    tags: ["Lifestyle", "Documentary", "Storytelling"],
+    thumbnail: "https://lh3.googleusercontent.com/d/lXiZPYXqegL0j2xoK",
+    videoUrl: "https://www.youtube.com/embed/EIhrG2DSL2s",
+    summary: "Ongoing social media content management, creation, and documentary production capturing authentic brand stories.",
+    objective: "Build engaged community around lifestyle brand values through compelling visual storytelling and documentary content.",
+    execution: "Produced documentary-style content, maintained consistent posting schedule with authentic, relatable content, and created long-form pieces capturing brand journey.",
+    result: "Community grew to 50K+ engaged followers with strong comment engagement and documentary content driving deeper brand connection.",
   },
 ]
 
@@ -180,11 +180,11 @@ export function ProjectsSection() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
+              <div className="p-5 bg-[#1a1a1a]">
                 <p className="text-gold text-sm font-medium mb-1">
                   {project.client}
                 </p>
-                <h3 className="font-bold text-primary-foreground group-hover:text-gold transition-colors mb-3">
+                <h3 className="font-bold text-[#F5F5F0] group-hover:text-gold transition-colors mb-3">
                   {project.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -218,7 +218,7 @@ export function ProjectsSection() {
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/80 backdrop-blur flex items-center justify-center hover:bg-gold/20 transition-colors border border-white/20"
             >
-              <X className="w-5 h-5 text-white" />
+              <X className="w-5 h-5 text-[#F5F5F0]" />
             </button>
 
             {/* Video */}
@@ -238,38 +238,38 @@ export function ProjectsSection() {
                   <p className="text-gold font-medium mb-1">
                     {selectedProject.client}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-bold text-white">{selectedProject.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-[#F5F5F0]">{selectedProject.title}</h3>
                 </div>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent text-white shrink-0"
+                  className="border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent text-[#F5F5F0] shrink-0"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Full Project
                 </Button>
               </div>
 
-              <p className="text-gray-300 mb-6">
+              <p className="text-[#E8E8E3] mb-6">
                 {selectedProject.summary}
               </p>
 
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl bg-[#252525] border border-white/10">
                   <h4 className="font-semibold text-gold mb-2">Objective</h4>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-[#E8E8E3]">
                     {selectedProject.objective}
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#252525] border border-white/10">
                   <h4 className="font-semibold text-gold mb-2">Execution</h4>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-[#E8E8E3]">
                     {selectedProject.execution}
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-gold/10 border border-gold/30 sm:col-span-2 md:col-span-1">
                   <h4 className="font-semibold text-gold mb-2">Result</h4>
-                  <p className="text-sm text-white font-medium">
+                  <p className="text-sm text-[#F5F5F0] font-medium">
                     {selectedProject.result}
                   </p>
                 </div>

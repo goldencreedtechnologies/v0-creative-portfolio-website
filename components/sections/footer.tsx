@@ -2,23 +2,24 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Linkedin, Instagram, Mail, Heart } from "lucide-react"
+import Image from "next/image"
+import { Heart } from "lucide-react"
 
 const socialLinks = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/charles-samuel",
-    icon: Linkedin,
+    icon: "/images/linkedin-icon.svg",
   },
   {
     name: "Instagram",
     href: "https://instagram.com/goldencreed_",
-    icon: Instagram,
+    icon: "/images/instagram-icon.svg",
   },
   {
     name: "Email",
     href: "mailto:charlesgold59@gmail.com",
-    icon: Mail,
+    icon: "/images/email-icon.svg",
   },
 ]
 
@@ -92,9 +93,15 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-gold/20 hover:text-gold transition-colors group"
+                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-gold/20 transition-colors group"
                   >
-                    <social.icon className="w-5 h-5" />
+                    <Image
+                      src={social.icon}
+                      alt={social.name}
+                      width={20}
+                      height={20}
+                      className="opacity-70 group-hover:opacity-100 transition-opacity"
+                    />
                     <span className="sr-only">{social.name}</span>
                   </Link>
                 ))}
