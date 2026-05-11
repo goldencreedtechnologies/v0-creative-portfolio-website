@@ -17,12 +17,12 @@ const skills = [
   },
   {
     name: "CapCut",
-    icon: "/images/capcut-logo.svg",
+    icon: "https://lh3.googleusercontent.com/d/1tO9MD3U4QA7BSacT",
     isImage: true,
   },
   {
     name: "Canva",
-    icon: "/images/canva-logo.svg",
+    icon: "https://lh3.googleusercontent.com/d/01yhDQjdoyRC2IYy2",
     isImage: true,
   },
   {
