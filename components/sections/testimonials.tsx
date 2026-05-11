@@ -96,31 +96,31 @@ export function TestimonialsSection() {
           }`}
         >
           {/* Testimonial Card */}
-          <div className="relative p-8 md:p-12 rounded-3xl bg-secondary border border-border">
+          <div className="relative p-8 md:p-12 rounded-3xl bg-gold border border-gold-dark">
             {/* Quote icon */}
-            <div className="absolute -top-6 left-8 w-12 h-12 rounded-full bg-gold flex items-center justify-center">
-              <Quote className="w-6 h-6 text-black" />
+            <div className="absolute -top-6 left-8 w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center">
+              <Quote className="w-6 h-6 text-gold" />
             </div>
 
             {/* Stars */}
             <div className="flex gap-1 mb-6">
               {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                <Star key={i} className="w-5 h-5 text-[#1a1a1a] fill-[#1a1a1a]" />
               ))}
             </div>
 
             {/* Content */}
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-primary-foreground">
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-[#1a1a1a]">
               &ldquo;{testimonials[currentIndex].content}&rdquo;
             </blockquote>
 
             {/* Author */}
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-bold text-lg text-primary-foreground">
+                <p className="font-bold text-lg text-[#1a1a1a]">
                   {testimonials[currentIndex].name}
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-[#3d3d3d]">
                   {testimonials[currentIndex].role}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export function TestimonialsSection() {
                   variant="outline"
                   size="icon"
                   onClick={prevTestimonial}
-                  className="rounded-full border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
+                  className="rounded-full border-[#1a1a1a]/30 hover:bg-[#1a1a1a]/10 hover:border-[#1a1a1a] bg-transparent text-[#1a1a1a]"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </Button>
@@ -139,7 +139,7 @@ export function TestimonialsSection() {
                   variant="outline"
                   size="icon"
                   onClick={nextTestimonial}
-                  className="rounded-full border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
+                  className="rounded-full border-[#1a1a1a]/30 hover:bg-[#1a1a1a]/10 hover:border-[#1a1a1a] bg-transparent text-[#1a1a1a]"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </Button>
@@ -154,8 +154,8 @@ export function TestimonialsSection() {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2 h-2 rounded-full transition-all ${
                     index === currentIndex
-                      ? "bg-gold w-8"
-                      : "bg-primary-foreground/30 hover:bg-primary-foreground/50"
+                      ? "bg-[#1a1a1a] w-8"
+                      : "bg-[#1a1a1a]/30 hover:bg-[#1a1a1a]/50"
                   }`}
                 />
               ))}

@@ -1,53 +1,54 @@
 "use client"
 
 import * as React from "react"
-import { BarChart3, Film, Calendar, Globe, Settings, Play, Palette, Sparkles, Video } from "lucide-react"
+import Image from "next/image"
+import { BarChart3, Film, Calendar, Globe, Settings } from "lucide-react"
 
 const skills = [
   {
     name: "Premiere Pro",
-    icon: Play,
-    isLucide: true,
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
+    isImage: true,
   },
   {
     name: "After Effects",
-    icon: Sparkles,
-    isLucide: true,
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg",
+    isImage: true,
   },
   {
     name: "CapCut",
-    icon: Video,
-    isLucide: true,
+    icon: "https://sf16-sg.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/capcut-pc/logo/capcut_logo.svg",
+    isImage: true,
   },
   {
     name: "Canva",
-    icon: Palette,
-    isLucide: true,
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+    isImage: true,
   },
   {
     name: "Social Media Strategy",
     icon: BarChart3,
-    isLucide: true,
+    isImage: false,
   },
   {
     name: "Short-Form Editing",
     icon: Film,
-    isLucide: true,
+    isImage: false,
   },
   {
     name: "Content Planning",
     icon: Calendar,
-    isLucide: true,
+    isImage: false,
   },
   {
     name: "Web Design",
     icon: Globe,
-    isLucide: true,
+    isImage: false,
   },
   {
     name: "Brand Content Systems",
     icon: Settings,
-    isLucide: true,
+    isImage: false,
   },
 ]
 
@@ -103,7 +104,18 @@ export function SkillsSection() {
               style={{ transitionDelay: `${index * 50}ms` }}
             >
 <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                <skill.icon className="w-6 h-6 text-gold" />
+                {skill.isImage ? (
+                  <Image
+                    src={skill.icon as string}
+                    alt={skill.name}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                    unoptimized
+                  />
+                ) : (
+                  <skill.icon className="w-6 h-6 text-gold" />
+                )}
               </div>
               <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
                 {skill.name}
