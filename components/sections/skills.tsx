@@ -7,22 +7,22 @@ import { BarChart3, Film, Calendar, Globe, Settings } from "lucide-react"
 const skills = [
   {
     name: "Premiere Pro",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
     isImage: true,
   },
   {
     name: "After Effects",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg",
     isImage: true,
   },
   {
     name: "CapCut",
-    icon: "https://sf16-sg.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/capcut-pc/logo/capcut_logo.svg",
+    icon: "/images/capcut-logo.svg",
     isImage: true,
   },
   {
     name: "Canva",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+    icon: "/images/canva-logo.svg",
     isImage: true,
   },
   {
