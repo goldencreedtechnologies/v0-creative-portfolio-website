@@ -10,8 +10,8 @@ const projects = [
     title: "Brand Campaign Series",
     client: "Anita Darlington",
     tags: ["Short-form", "Brand Content", "Social"],
-    thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/EqvQUXBhUqA/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/EqvQUXBhUqA",
     summary: "A comprehensive brand campaign designed to increase social presence and engagement.",
     objective: "Create a series of engaging short-form videos that showcase brand personality and drive follower growth.",
     execution: "Developed a content calendar with 3 weekly posts, focusing on trending audio and authentic storytelling.",
@@ -19,10 +19,10 @@ const projects = [
   },
   {
     title: "Artist Promotion Package",
-    client: "Mateen Lander",
+    client: "David Operah",
     tags: ["Music", "Reels", "TikTok"],
-    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    thumbnail: "https://scontent.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/DL8KVcuytak.jpg",
+    videoUrl: "https://www.instagram.com/reel/DL8KVcuytak/embed",
     summary: "Multi-platform content strategy for emerging artist promotion.",
     objective: "Build buzz around new music release through strategic content placement.",
     execution: "Created teaser clips, behind-the-scenes content, and lyric snippets optimized for each platform.",
@@ -180,11 +180,11 @@ export function ProjectsSection() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
+              <div className="p-5 bg-[#1a1a1a]">
                 <p className="text-gold text-sm font-medium mb-1">
                   {project.client}
                 </p>
-                <h3 className="font-bold text-primary-foreground group-hover:text-gold transition-colors mb-3">
+                <h3 className="font-bold text-[#F5F5F0] group-hover:text-gold transition-colors mb-3">
                   {project.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -218,7 +218,7 @@ export function ProjectsSection() {
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/80 backdrop-blur flex items-center justify-center hover:bg-gold/20 transition-colors border border-white/20"
             >
-              <X className="w-5 h-5 text-white" />
+              <X className="w-5 h-5 text-[#F5F5F0]" />
             </button>
 
             {/* Video */}
@@ -238,38 +238,38 @@ export function ProjectsSection() {
                   <p className="text-gold font-medium mb-1">
                     {selectedProject.client}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-bold text-white">{selectedProject.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-[#F5F5F0]">{selectedProject.title}</h3>
                 </div>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent text-white shrink-0"
+                  className="border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent text-[#F5F5F0] shrink-0"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Full Project
                 </Button>
               </div>
 
-              <p className="text-gray-300 mb-6">
+              <p className="text-[#E8E8E3] mb-6">
                 {selectedProject.summary}
               </p>
 
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl bg-[#252525] border border-white/10">
                   <h4 className="font-semibold text-gold mb-2">Objective</h4>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-[#E8E8E3]">
                     {selectedProject.objective}
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#252525] border border-white/10">
                   <h4 className="font-semibold text-gold mb-2">Execution</h4>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-[#E8E8E3]">
                     {selectedProject.execution}
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-gold/10 border border-gold/30 sm:col-span-2 md:col-span-1">
                   <h4 className="font-semibold text-gold mb-2">Result</h4>
-                  <p className="text-sm text-white font-medium">
+                  <p className="text-sm text-[#F5F5F0] font-medium">
                     {selectedProject.result}
                   </p>
                 </div>
