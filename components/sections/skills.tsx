@@ -2,37 +2,32 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { BarChart3, Film, Calendar, Globe, Settings } from "lucide-react"
+import { BarChart3, Calendar, Globe, Settings } from "lucide-react"
 
 const skills = [
   {
     name: "Premiere Pro",
-    icon: "https://cdn.simpleicons.org/adobepremierepro",
+    icon: "/images/premiere-pro-logo.png",
     isImage: true,
   },
   {
-    name: "After Effects",
-    icon: "https://cdn.simpleicons.org/adobeaftereffects",
+    name: "DaVinci Resolve",
+    icon: "/images/davinci-resolve-logo.png",
     isImage: true,
   },
   {
     name: "CapCut",
-    icon: "https://cdn.simpleicons.org/capcut",
+    icon: "/images/capcut-logo.png",
     isImage: true,
   },
   {
     name: "Canva",
-    icon: "https://cdn.simpleicons.org/canva",
+    icon: "/images/canva-logo.png",
     isImage: true,
   },
   {
     name: "Social Media Strategy",
     icon: BarChart3,
-    isImage: false,
-  },
-  {
-    name: "Short-Form Editing",
-    icon: Film,
     isImage: false,
   },
   {
@@ -103,14 +98,20 @@ export function SkillsSection() {
               }`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-<div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+<div
+                className={`w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden transition-colors ${
+                  skill.isImage
+                    ? ""
+                    : "bg-gold/10 group-hover:bg-gold/20"
+                }`}
+              >
                 {skill.isImage ? (
                   <Image
                     src={skill.icon as string}
-                    alt={skill.name}
-                    width={28}
-                    height={28}
-                    className="object-contain"
+                    alt={`${skill.name} logo`}
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-contain"
                     unoptimized
                   />
                 ) : (
