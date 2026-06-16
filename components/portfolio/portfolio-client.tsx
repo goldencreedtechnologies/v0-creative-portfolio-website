@@ -64,7 +64,7 @@ export function PortfolioClient() {
 
       {/* Intro section */}
       <section className="relative overflow-hidden border-b border-gold/10">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5" />
+        <div className="absolute inset-0 bg-linear-to-br from-gold/5 via-transparent to-gold/5" />
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl">
             <span className="text-gold font-medium tracking-wider uppercase text-sm">
@@ -105,13 +105,13 @@ export function PortfolioClient() {
               className="group relative text-left rounded-2xl overflow-hidden bg-secondary border border-border hover:border-gold/40 transition-all duration-500 hover:shadow-2xl hover:shadow-gold/20 hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               {/* Image */}
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <img
                   src={category.image || "/placeholder.svg"}
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 group-hover:from-black/80 transition-colors" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/20 group-hover:from-black/80 transition-colors" />
 
                 {/* Play badge */}
                 <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold text-black text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">

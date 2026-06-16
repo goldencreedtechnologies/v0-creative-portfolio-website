@@ -44,8 +44,9 @@ const steps = [
 
 export function ProcessSection() {
   const [isVisible, setIsVisible] = React.useState(false)
+  const [index, setIndex] = React.useState(0)
+
   const sectionRef = React.useRef<HTMLElement>(null)
-  const scrollRef = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -64,14 +65,12 @@ export function ProcessSection() {
     return () => observer.disconnect()
   }, [])
 
-  const scrollBy = (direction: "left" | "right") => {
-    const container = scrollRef.current
-    if (!container) return
-    const amount = container.clientWidth * 0.8
-    container.scrollBy({
-      left: direction === "left" ? -amount : amount,
-      behavior: "smooth",
-    })
+  const prev = () => {
+    setIndex((prev) => Math.max(prev - 1, 0))
+  }
+
+  const next = () => {
+    setIndex((prev) => Math.min(prev + 1, steps.length - 1))
   }
 
   return (
@@ -118,16 +117,17 @@ export function ProcessSection() {
             <Button
               variant="outline"
               size="icon"
-              onClick={() => scrollBy("left")}
+              onClick={prev}
               aria-label="Previous steps"
               className="rounded-full border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
+
             <Button
               variant="outline"
               size="icon"
-              onClick={() => scrollBy("right")}
+              onClick={next}
               aria-label="Next steps"
               className="rounded-full border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
             >
@@ -135,20 +135,22 @@ export function ProcessSection() {
             </Button>
           </div>
 
-          {/* Horizontal scroll track */}
+          {/* Slider track */}
           <div
-            ref={scrollRef}
-            className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-6 px-6 [scrollbar-width:thin]"
+            className="flex gap-5 pb-4 -mx-6 px-6 transition-transform duration-500"
+            style={{
+              transform: `translateX(-${index * 80}%)`,
+            }}
           >
-            {steps.map((step, index) => (
+            {steps.map((step, i) => (
               <div
-                key={index}
-                className={`relative shrink-0 snap-start w-[78%] sm:w-[44%] lg:w-[30%] xl:w-[22%] transition-all duration-700 ${
+                key={i}
+                className={`relative shrink-0 w-[78%] sm:w-[44%] lg:w-[30%] xl:w-[22%] transition-all duration-700 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
-                style={{ transitionDelay: `${index * 120}ms` }}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
                 {/* Number marker */}
                 <div className="relative z-10 mx-auto mb-4">
@@ -164,9 +166,11 @@ export function ProcessSection() {
                   <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-gold/20 transition-colors shrink-0">
                     <step.icon className="w-5 h-5 lg:w-6 lg:h-6 text-gold" />
                   </div>
+
                   <h3 className="text-base lg:text-lg font-bold mb-2 group-hover:text-gold transition-colors">
                     {step.title}
                   </h3>
+
                   <p className="text-xs lg:text-sm text-muted-foreground leading-relaxed flex-1">
                     {step.description}
                   </p>

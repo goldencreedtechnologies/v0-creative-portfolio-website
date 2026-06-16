@@ -19,7 +19,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     title: "YouTube Content",
     description:
       "Long-form and short-form YouTube production — from podcasts and event promos to channel-ready shorts built for retention and growth.",
-    image: "https://img.youtube.com/vi/EqvQUXBhUqA/maxresdefault.jpg",
+    image: "/images/youtube-contents.png",
     tags: ["Shorts", "Podcasts", "Event Promo"],
     videos: [
       {
@@ -59,7 +59,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     title: "Short Form Content",
     description:
       "Scroll-stopping reels, TikToks, and music content engineered with strong hooks, clean pacing, and platform-native edits.",
-    image: "https://lh3.googleusercontent.com/d/ErtLK2pa2Jl9ehxfk",
+    image: "/images/short-form-contents.png",
     tags: ["Reels", "TikTok", "Music Content"],
     videos: [
       {
@@ -99,7 +99,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     title: "Concept Content",
     description:
       "Strategy-led content built around brand growth — social campaigns, publicity pushes, and concept-driven storytelling that moves audiences.",
-    image: "https://www.instagram.com/p/CnUCh7MNmA2/media/?size=l",
+    image: "/images/concept-contents.png",
     tags: ["Social Media", "Content Strategy", "Publicity", "Brand Growth"],
     videos: [
       {
@@ -134,7 +134,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     title: "Event Highlights",
     description:
       "Cinematic event coverage — capturing key moments, live energy, and recap-ready highlights that bring the experience back to life.",
-    image: "https://img.youtube.com/vi/EIhrG2DSL2s/maxresdefault.jpg",
+    image: "/images/event-highlights.png",
     tags: ["Moments", "Snapshots", "Live Coverage", "Recaps"],
     videos: [
       {
