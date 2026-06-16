@@ -24,11 +24,12 @@ const socialLinks = [
 ]
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#work", label: "Work" },
-  { href: "#process", label: "Process" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#work", label: "Work" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/#process", label: "Process" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function Footer() {

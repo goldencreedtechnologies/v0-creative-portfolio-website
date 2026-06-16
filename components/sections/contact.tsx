@@ -39,7 +39,7 @@ export function ContactSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left - CTA */}
           <div
             className={`space-y-8 transition-all duration-700 ${
