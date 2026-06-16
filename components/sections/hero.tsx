@@ -64,7 +64,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-gold hover:bg-gold-dark text-black font-semibold rounded-full px-8 group"
               >
-                <Link href="#work">
+                <Link href="/portfolio">
                   View Portfolio
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>

@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#work", label: "Work" },
-  { href: "#process", label: "Process" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#work", label: "Work" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/#process", label: "Process" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function Navigation() {
@@ -46,7 +47,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -59,7 +60,7 @@ export function Navigation() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Button
               asChild
               className="bg-gold hover:bg-gold-dark text-black font-medium rounded-full px-6"
@@ -74,7 +75,7 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
@@ -88,7 +89,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-gold/10 shadow-xl">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-gold/10 shadow-xl">
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link

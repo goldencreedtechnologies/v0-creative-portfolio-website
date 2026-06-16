@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { Search, Lightbulb, Film, Settings, Send } from "lucide-react"
+import { Search, Lightbulb, Film, Settings, Send, ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const steps = [
   {
@@ -44,6 +45,7 @@ const steps = [
 export function ProcessSection() {
   const [isVisible, setIsVisible] = React.useState(false)
   const sectionRef = React.useRef<HTMLElement>(null)
+  const scrollRef = React.useRef<HTMLDivElement>(null)
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -61,6 +63,16 @@ export function ProcessSection() {
 
     return () => observer.disconnect()
   }, [])
+
+  const scrollBy = (direction: "left" | "right") => {
+    const container = scrollRef.current
+    if (!container) return
+    const amount = container.clientWidth * 0.8
+    container.scrollBy({
+      left: direction === "left" ? -amount : amount,
+      behavior: "smooth",
+    })
+  }
 
   return (
     <section
@@ -101,19 +113,42 @@ export function ProcessSection() {
         </div>
 
         <div className="relative">
-          {/* Connector line - only visible on large screens */}
-          <div className="hidden xl:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-gold/20 via-gold/60 to-gold/20" />
+          {/* Slider controls */}
+          <div className="flex items-center justify-end gap-2 mb-6">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => scrollBy("left")}
+              aria-label="Previous steps"
+              className="rounded-full border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => scrollBy("right")}
+              aria-label="Next steps"
+              className="rounded-full border-gold/30 hover:bg-gold/10 hover:border-gold bg-transparent"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-5">
+          {/* Horizontal scroll track */}
+          <div
+            ref={scrollRef}
+            className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-6 px-6 [scrollbar-width:thin]"
+          >
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`relative transition-all duration-700 ${
+                className={`relative shrink-0 snap-start w-[78%] sm:w-[44%] lg:w-[30%] xl:w-[22%] transition-all duration-700 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{ transitionDelay: `${index * 120}ms` }}
               >
                 {/* Number marker */}
                 <div className="relative z-10 mx-auto mb-4">
@@ -125,7 +160,7 @@ export function ProcessSection() {
                 </div>
 
                 {/* Content card */}
-                <div className="h-full p-4 lg:p-5 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 text-center group flex flex-col">
+                <div className="h-full p-5 lg:p-6 rounded-2xl bg-card border border-border hover:border-gold/40 transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 text-center group flex flex-col">
                   <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-gold/20 transition-colors shrink-0">
                     <step.icon className="w-5 h-5 lg:w-6 lg:h-6 text-gold" />
                   </div>
